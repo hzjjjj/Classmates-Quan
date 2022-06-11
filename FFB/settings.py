@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '0.0.0.0',
+    'classmatesquan.herokuapp.com',
     'https://classmatesquan.herokuapp.com',
 ]
 
