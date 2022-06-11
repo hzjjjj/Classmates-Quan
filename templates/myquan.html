@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if quan_list %}
+    {% for  in quan_list %}
+    {{ quan.quan_title }}
+
+    {% endfor %}
+{% else %}
+    <p>我还没有发表过朋友圈，去写一篇……</p>
+
+{% endif %}
+
+{% endblock %}

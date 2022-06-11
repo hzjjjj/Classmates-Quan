@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for quan in quan_list reversed %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 p-3">
+    <a href="#" style="">
+	<img src="/static/pic/t001.png" alt="头像" width="60" height="60" class="rounded-circle flex-shrink-0">
+    <br> &nbsp {{ quan.quan_creator.first_name}}
+    </a>
+    </div>
+    <div class="col-sm-10 p-3">
+	<a href="/quan/{{ quan.id}}" style="color:#369;display:block;">
+        <h4>{{ quan.quan_title }}</h4> </a>
+        <h5><a href="/quan/list{{ quan.quan_type.0}}">{{ quan.quan_type.1}}</a>&nbsp {{ quan.quan_created_date|date:"Y-m-d" }}</h5>
+        <p>{{ quan.quan_content|striptags|truncatechars:158}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

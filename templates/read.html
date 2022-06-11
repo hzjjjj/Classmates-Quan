@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h4>{{ quan.quan_title }}</h4> <h5><a href="/quan/list{{ quan.quan_type.0}}">{{ quan.quan_type.1}}同类文章</a>  &nbsp &nbsp
+    作者：{{ quan.quan_creator}} &nbsp {{ quan.quan_created_date|date:"Y-m-d" }}</h5>
+    <p>{{ quan.quan_content|safe}}</p>
+    <a href="/quan/{{ quan.id|add:1 }}/"><button type="button" class="btn btn-primary">阅读下一篇{{ quan.pk }}</button></a>&nbsp &nbsp &nbsp
+    <a href="/quan/"><button type="button" class="btn btn-success">返回首页</button></a>
+</div>
+{% endblock %}

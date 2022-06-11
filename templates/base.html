@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>706班同学圈-Fake Facebook</title>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="height: 350px;background-image: url('/static/pic/top.jpg');background-size: 100% 100%;">
+    <a href="/" style="color:#FFF;float:left;"> <h3> < 首页 </h3> </a>
+	<a href="/quan/add" style="color:#FFF;float:right;"> <h3>发表</h3> </a>
+	<br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<div style="color:#FFF;float:right;display:block;">
+	  <h2 style="float:left;padding-top:20px;"> 金大桐  </h2>
+	  <img src="/static/pic/t001.png" alt="头像" width="120" height="120" class="rounded-circle flex-shrink-0">
+    </div>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
