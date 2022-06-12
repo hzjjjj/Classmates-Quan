@@ -21,7 +21,7 @@ from classmates.views import quanlist,quanlistid,quanread,quan_create_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', quanlist, name="index"),
-    path(r'static/$','django.views.static.serve',{'document_root':settings.STATIC_ROOT}),
+    path(r'static/$','django.views.static.server',{'document_root':settings.STATIC_ROOT}),
     path('quan/', quanlist, name="quanlist"),
     path('quan/<int:id>/',quanread, name="quanread"),
     path('quan/list<int:id>/', quanlistid, name="quanlistid"),
